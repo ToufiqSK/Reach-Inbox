@@ -37,7 +37,7 @@ function OneBox() {
         {selectedComponent === "/stack" && <SubView />}
         {selectedComponent === "/inbox" && <MainPage />}
         {selectedComponent === "/stacks" && <SubView />}
-        {!selectedComponent && <SubView />} {/* Fallback */}
+        {!selectedComponent && <SubView />} 
       </div>
     </div>
   );
