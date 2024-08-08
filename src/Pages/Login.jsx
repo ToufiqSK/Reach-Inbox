@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import AppBar from "../components/AppBar";
 
 import Footer from "../components/Footer";
@@ -6,7 +6,7 @@ import SignupCard from "../components/SignupCard";
 
 function Login() {
   const navigate = useNavigate();
-  const token = "abcd";
+  const token = localStorage.getItem("token");
 
   if (token) {
     navigate("/");
@@ -14,7 +14,7 @@ function Login() {
     navigate("/login");
   }
 
-  
+ 
 
   return (
     <div>

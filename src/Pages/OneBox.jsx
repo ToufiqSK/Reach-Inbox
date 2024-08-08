@@ -3,11 +3,13 @@ import SubView from "../components/SubView";
 import MainPage from "../components/MainPage";
 import SideBar from "../components/SideBar";
 import TopBar from "../components/TopBar";
-import {  useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 function OneBox() {
   const navigate = useNavigate();
-  const token = "abcd";
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const token = queryParams.get("token");
 
   useEffect(() => {
     if (!token) {
