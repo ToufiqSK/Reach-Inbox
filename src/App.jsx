@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Login from "./pages/Login.jsx"
-import OneBox from "./pages/OneBox.jsx"
+import Login from "./Pages/Login.jsx"
+import OneBox from "./Pages/OneBox.jsx"
 
 function App() {
   return (
