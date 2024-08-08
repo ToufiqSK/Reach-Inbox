@@ -5,6 +5,8 @@ import { SiElasticstack } from "react-icons/si";
 import { FaInbox } from "react-icons/fa";
 import { IoStatsChartSharp } from "react-icons/io5";
 import logo from '../assets/logo.svg';
+import PropTypes from 'prop-types';
+
 
 function SideBar({ onMenuItemClick }) {
   const [selectedItem, setSelectedItem] = useState('/');
@@ -15,7 +17,7 @@ function SideBar({ onMenuItemClick }) {
   };
 
   return (
-    <div className="dark:bg-[#101113] bg-white overflow-y-scroll no-scrollbar h-screen w-14 flex flex-col justify-between items-center py-6 border-r-2 dark:border-[#343A40] border-[#E0E0E0] fixed z-10">
+    <div className="dark:bg-[#101113] bg-white overflow-y-scroll no-scrollbar h-screen w-14 flex flex-col justify-between items-center py-6 border-r-2 dark:border-[#343A40] border-[#E0E0E0] fixed z-10 left-0">
       <div className="rounded-xl">
         <img src={logo} className="h-8 rounded-xl object-left overflow-visible" alt="Logo" />
       </div>
@@ -63,11 +65,16 @@ function SideBar({ onMenuItemClick }) {
           <IoStatsChartSharp />
         </div>
       </div>
-      <div className="text-white bg-green-500 p-2 rounded-full">
-        PS
+      <div className="text-white flex justify-center items-center w-[32px] h-[32px] bg-green-900 p-2 rounded-full">
+        TS
       </div>
     </div>
   );
 }
+
+SideBar.propTypes = {
+  onMenuItemClick: PropTypes.string.isRequired,
+  
+};
 
 export default SideBar;

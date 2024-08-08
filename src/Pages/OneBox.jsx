@@ -30,7 +30,6 @@ function OneBox() {
       <SideBar onMenuItemClick={handleMenuItemClick} />
       <TopBar />
       <div>
-        {/* Render the selected component based on the selected path */}
         {selectedComponent === "/" && <SubView />}
         {selectedComponent === "/search" && <SubView />}
         {selectedComponent === "/mail" && <SubView />}
@@ -38,9 +37,11 @@ function OneBox() {
         {selectedComponent === "/stack" && <SubView />}
         {selectedComponent === "/inbox" && <MainPage />}
         {selectedComponent === "/stacks" && <SubView />}
+        {!selectedComponent && <SubView />} {/* Fallback */}
       </div>
     </div>
   );
+  
 }
 
 export default OneBox;
