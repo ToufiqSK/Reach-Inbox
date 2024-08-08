@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import AllInbox from "./AllInbox";
-import CenterPage from "./CenterPage";
-import RightSection from "./RightSection";
+import AllInbox from "./AllInBox.jsx";
+import CenterPage from "./CenterPage.jsx";
+import RightSection from "./RightSection.jsx";
 
 function MainPage() {
   const [datas, setData] = useState([]);
